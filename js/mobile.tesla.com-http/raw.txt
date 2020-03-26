@@ -1,0 +1,27 @@
+Running against: http://mobile.tesla.com/AppStore/lib/modernizr/modernizr.js
+
+http://www.w3.org/2000/svg
+Running against: http://mobile.tesla.com/AppStore/lib/bootstrap/js/bootstrap.js
+
+Running against: http://mobile.tesla.com/AppStore/lib/spinjs/spin.js
+
+text/css
+Running against: https://az416426.vo.msecnd.net/scripts/a/ai.0.js
+
+https://dc.services.visualstudio.com/v2/track
+https://breeze.aimon.applicationinsights.io/v2/track
+https://dc-int.services.visualstudio.com/v2/track
+application/json
+/browserLinkSignalR/
+/__browserLink/
+/AppStore/lib/modernizr/modernizr.js
+/AppStore/lib/jquery/jquery.js
+/AppStore/lib/bootstrap/css/bootstrap.css
+/AppStore/lib/bootstrap/js/bootstrap.js
+/AppStore/lib/spinjs/spin.js
+/AppStore/content/tesla2.css
+/AppStore/content/site.css
+text/javascript
+https://az416426.vo.msecnd.net/scripts/a/ai.0.js
+/AppStore
+/AppStore/Account/Username
