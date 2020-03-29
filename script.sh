@@ -2,7 +2,7 @@
 
 mkdir js
 mkdir db
-linkf=/root/tools/LinkFinder/linkfinder.py
+linkf=~/tools/LinkFinder/linkfinder.py
 
 for i in $(cat alive.txt)
 do
@@ -12,7 +12,7 @@ do
         mkdir db/$n1-$n2
         timeout 30 python3 $linkf -d -i $i -o cli > js/$n1-$n2/raw.txt
 
-        jslinks=$(cat js/$n1-$n2/raw.txt | grep '\.js' | grep "$n1" | grep -oaEi "https?://[^\"\\'> ]+")
+        jslinks=$(cat js/$n1-$n2/raw.txt | grep -oaEi "https?://[^\"\\'> ]+" | grep '\.js' | grep "$n1" | sort -u)
 
         if [[ ! -z $jslinks ]]
         then

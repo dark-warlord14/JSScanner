@@ -1,4 +1,0 @@
-http://toolbox.tesla.com/js/manifest.js
-http://toolbox.tesla.com/js/external.js
-http://toolbox.tesla.com/js/vendors.js
-http://toolbox.tesla.com/js/app.js

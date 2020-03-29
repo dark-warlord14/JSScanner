@@ -1,5 +1,0 @@
-https://edr.tesla.com/gtm.js
-https://edr.tesla.com/gtm.js
-https://edr.tesla.com/js/tds-header.js
-https://edr.tesla.com/js/umbrella.min.js
-https://edr.tesla.com/js/script.js

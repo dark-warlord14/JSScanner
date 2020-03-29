@@ -1,3 +1,0 @@
-http://mobile.tesla.com/AppStore/lib/modernizr/modernizr.js
-http://mobile.tesla.com/AppStore/lib/bootstrap/js/bootstrap.js
-http://mobile.tesla.com/AppStore/lib/spinjs/spin.js
