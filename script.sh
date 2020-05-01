@@ -36,7 +36,7 @@ mkdir js
 mkdir db
 linkf=~/tools/LinkFinder/linkfinder.py
 
-for i in $(cat alive.txt)
+for i in $(cat $1)
 do
         n1=$(echo $i | awk -F/ '{print $3}')
         n2=$(echo $i | awk -F/ '{print $1}' | sed 's/.$//')
