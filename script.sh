@@ -32,8 +32,20 @@ rand=$((RANDOM % ${#QUOTES[@]}))
 printf "${YELLOW}[i]${END} ${QUOTES[$rand]}\\n"
 echo
 
+if [[ $# -eq 0 ]] ; then
+    printf '\nNo Host File or Path-to-file Given!'
+    printf '\n\nUsage: jsscanner path-to-hosts-file\n\n'
+    exit 0
+fi
+
+
+mkdir $1-Jsscanner-results
+cd $1-Jsscanner-results
+
 mkdir js
 mkdir db
+
+
 linkf=~/tools/LinkFinder/linkfinder.py
 
 for i in $(cat $1)
