@@ -4,7 +4,7 @@ GREEN='\033[0;32m'
 YELLOW='\033[0;33m'
 CYAN='\033[0;36m'
 END='\033[0m'
-
+cwd=$(pwd)
 
 QUOTES=(
 	"Activating 1337 mode!"
@@ -48,7 +48,7 @@ mkdir db
 
 linkf=~/tools/LinkFinder/linkfinder.py
 
-for i in $(cat $1)
+for i in $(cat $cwd/$1)
 do
         n1=$(echo $i | awk -F/ '{print $3}')
         n2=$(echo $i | awk -F/ '{print $1}' | sed 's/.$//')
