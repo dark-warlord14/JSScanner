@@ -26,7 +26,7 @@ python3 setup.py install
 sudo chmod +x $cwd/script.sh
 
 
-echo "alias jsscanner='$cwd/script.sh'" >> ~/.bash_aliases
-source ~/.bash_aliases
+echo "alias jsscanner='$cwd/script.sh'" >> ~/.bash_profile
+source ~/.bash_profile
 
 echo "All set bro"
