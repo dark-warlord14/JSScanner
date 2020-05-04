@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cwd=$pwd
+cwd=$(pwd)
 
 if [[ ! -d ~/tools ]]
 then
