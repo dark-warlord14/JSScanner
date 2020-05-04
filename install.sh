@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cwd=$pwd
+
 if [[ ! -d ~/tools ]]
 then
 	mkdir ~/tools
@@ -21,10 +23,10 @@ pip3 install -r requirements.txt
 python3 setup.py install
 
 
-sudo chmod +x ~/JSScanner/script.sh
+sudo chmod +x $cwd/JSScanner/script.sh
 
 
-echo "alias jsscanner='$HOME/JSScanner/script.sh'" >> ~/.bash_aliases
+echo "alias jsscanner='$cwd/JSScanner/script.sh'" >> ~/.bash_aliases
 source ~/.bash_aliases
 
 echo "All set bro"
