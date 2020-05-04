@@ -4,7 +4,6 @@ GREEN='\033[0;32m'
 YELLOW='\033[0;33m'
 CYAN='\033[0;36m'
 END='\033[0m'
-cwd=$(pwd)
 
 QUOTES=(
 	"Activating 1337 mode!"
@@ -29,7 +28,7 @@ QUOTES=(
 )
 
 rand=$((RANDOM % ${#QUOTES[@]}))
-printf "${YELLOW}[i]${END} ${QUOTES[$rand]}\\n"
+printf "${YELLOW}[i]${END} ${QUOTES[$rand]}\n"
 echo
 
 if [[ $# -eq 0 ]] ; then
@@ -48,7 +47,7 @@ mkdir db
 
 linkf=~/tools/LinkFinder/linkfinder.py
 
-for i in $(cat $cwd/$1)
+for i in $(cat $1)
 do
         n1=$(echo $i | awk -F/ '{print $3}')
         n2=$(echo $i | awk -F/ '{print $1}' | sed 's/.$//')
@@ -67,6 +66,7 @@ do
 			wget $js -P db/$n1-$n2/ -q
                 done
         fi
-        printf "${GREEN}[+]${END} $i ${YELLOW}done${END}.\\n"
+        printf "${GREEN}[+]${END} $i ${YELLOW}done${END}.\n"
 done
-printf "${YELLOW}[+]${END} Script is done.\\n"
+printf "${YELLOW}[+]${END} Script is done.\n"
+printf "\n${YELLOW}[+]${END} Results stored in $1-Jsscanner-results.\n"

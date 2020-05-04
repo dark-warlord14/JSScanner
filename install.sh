@@ -16,17 +16,20 @@ then
 else
 	printf "LinkFinder already present in tools folder...!\n\n"
 fi
-apt install wget -y
+sudo apt install wget -y
+sudo apt install python3-pip
+
 cd LinkFinder
 
-pip3 install -r requirements.txt
-python3 setup.py install
+sudo pip3 install -r requirements.txt
+sudo python3 setup.py install
 
 
 sudo chmod +x $cwd/script.sh
 
 
 echo "alias jsscanner='$cwd/script.sh'" >> ~/.bash_profile
-source ~/.bash_profile
+
+. $HOME/.bash_profile
 
 echo "All set bro"
