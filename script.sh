@@ -37,18 +37,21 @@ if [[ $# -eq 0 ]] ; then
     exit 0
 fi
 
-
+echo $(pwd)
 mkdir $1-Jsscanner-results
-cd $1-Jsscanner-results
+# cd $1-Jsscanner-results
 
-mkdir js
-mkdir db
+mkdir $1-Jsscanner-results/js
+mkdir $1-Jsscanner-results/db
+
+# cd ..
 
 
 linkf=~/tools/LinkFinder/linkfinder.py
 
 for i in $(cat $1)
 do
+		cd $1-Jsscanner-results
         n1=$(echo $i | awk -F/ '{print $3}')
         n2=$(echo $i | awk -F/ '{print $1}' | sed 's/.$//')
         mkdir js/$n1-$n2

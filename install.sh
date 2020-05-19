@@ -27,9 +27,18 @@ sudo python3 setup.py install
 
 sudo chmod +x $cwd/script.sh
 
+if [[ ! -f ~/.bash_aliases ]]
+then
+	sudo mkdir ~/.bash_aliases 
+else
+	printf "bash_aliases Present...!\n\n"
+fi
 
-echo "alias jsscanner='$cwd/script.sh'" >> ~/.bash_profile
+sudo chown $USER:$USER ~/.bash_aliases
+sudo chmod 644 ~/.bash_aliases
 
-. $HOME/.bash_profile
+echo "alias jsscanner='$cwd/script.sh'" >> ~/.bash_aliases
+
+. $HOME/.bash_aliases
 
 echo "All set bro"
