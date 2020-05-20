@@ -38,20 +38,22 @@ if [[ $# -eq 0 ]] ; then
 fi
 
 echo $(pwd)
-mkdir $1-Jsscanner-results
+mkdir Jsscanner-results
 # cd $1-Jsscanner-results
 
-mkdir $1-Jsscanner-results/js
-mkdir $1-Jsscanner-results/db
+mkdir Jsscanner-results/js
+mkdir Jsscanner-results/db
 
 # cd ..
 
 
 linkf=~/tools/LinkFinder/linkfinder.py
 
+# cd $1-Jsscanner-results
+
 for i in $(cat $1)
 do
-		cd $1-Jsscanner-results
+	cd Jsscanner-results
         n1=$(echo $i | awk -F/ '{print $3}')
         n2=$(echo $i | awk -F/ '{print $1}' | sed 's/.$//')
         mkdir js/$n1-$n2
@@ -69,7 +71,9 @@ do
 			wget $js -P db/$n1-$n2/ -q
                 done
         fi
-        printf "${GREEN}[+]${END} $i ${YELLOW}done${END}.\n"
+	cd ..
+	printf "${GREEN}[+]${END} $i ${YELLOW}done${END}.\n"
 done
+
 printf "${YELLOW}[+]${END} Script is done.\n"
 printf "\n${YELLOW}[+]${END} Results stored in $1-Jsscanner-results.\n"
