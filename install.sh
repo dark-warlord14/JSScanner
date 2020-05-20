@@ -41,4 +41,4 @@ echo "alias jsscanner='$cwd/script.sh'" >> ~/.bash_aliases
 
 . $HOME/.bash_aliases
 
-echo "All set bro"
+echo "All set bro, restart your terminal"
