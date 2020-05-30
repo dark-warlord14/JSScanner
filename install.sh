@@ -19,4 +19,16 @@ cd LinkFinder
 sudo pip3 install -r requirements.txt
 sudo python3 setup.py install
 
-echo "All set bro"
+
+sudo mkdir -p .bash_aliases
+sudo chown $USER:$USER ~/.bash_aliases
+sudo chmod 644 ~/.bash_aliases
+
+# sudo chown -R $USER:$USER $HOME
+
+echo "alias jsscanner='$cwd/script.sh'" >> ~/.bash_aliases
+
+. ~/.bash_aliases
+
+
+echo "All set bro, restart your terminal!"
