@@ -52,7 +52,7 @@ do
         n2=$(echo $i | awk -F/ '{print $1}' | sed 's/.$//')
         mkdir -p js/$n1-$n2
         mkdir -p db/$n1-$n2
-        timeout 30 python3 $linkf -d -i $i -o cli > js/$n1-$n2/raw.txt
+        timeout 40 python3 $linkf -d -i $i -o cli > js/$n1-$n2/raw.txt
 
         jslinks=$(cat js/$n1-$n2/raw.txt | grep -oaEi "https?://[^\"\\'> ]+" | grep '\.js' | grep "$n1" | sort -u)
 
