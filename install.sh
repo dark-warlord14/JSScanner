@@ -20,10 +20,8 @@ sudo pip3 install -r requirements.txt
 sudo python3 setup.py install
 
 
-sudo touch ~/.bash_aliases
-sudo chown $USER:$USER ~/.bash_aliases
-sudo chmod 644 ~/.bash_aliases
+echo "alias jsscanner='$cwd/script.sh'" >> ~/.bash_profile
 
-echo "alias jsscanner='$cwd/script.sh'" >> ~/.bash_aliases
+. ~/.bash_profile
 
 echo "All set bro, restart your terminal!"

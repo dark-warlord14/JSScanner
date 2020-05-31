@@ -16,5 +16,10 @@ https://example2.com
 
 To run the tool use
 ```
-bash script.sh
+jsscanner path-to-urls-file
+
+Eg. jsscanner hosts.txt
+    jsscanner /root/tools/hosts.txt
+
+
 ```
