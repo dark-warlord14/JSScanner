@@ -1,13 +1,27 @@
 #!/bin/bash
 
-mkdir ~/tools
-cd ~/tools
-git clone https://github.com/dark-warlord14/LinkFinder
+cwd=$(pwd)
 
-apt install wget -y
+mkdir -p ~/tools
+cd ~/tools
+
+if [[ ! -d ~/tools/LinkFinder ]]
+then
+        git clone https://github.com/dark-warlord14/LinkFinder
+else
+        printf "LinkFinder already present in tools folder...!\n\n"
+fi
+
+sudo apt install wget -y
+
 cd LinkFinder
 
-pip3 install -r requirements.txt
-python3 setup.py install
+sudo pip3 install -r requirements.txt
+sudo python3 setup.py install
 
-echo "All set bro"
+
+echo "alias jsscanner='$cwd/script.sh'" >> ~/.bash_profile
+
+. ~/.bash_profile
+
+echo "All set bro, restart your terminal!"
