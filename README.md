@@ -18,5 +18,5 @@ To run the tool use
 ```
 jsscanner path_to_alive.txt
 
-Eg. jsscanner alive.txt.txt
+Eg. jsscanner alive.txt
 ```
