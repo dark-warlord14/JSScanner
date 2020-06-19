@@ -20,3 +20,6 @@ jsscanner path_to_alive.txt
 
 Eg. jsscanner alive.txt
 ```
+
+
+Thanks to [@amiralkizaru](https://github.com/amiralkizaru), [@LifeHack3r](https://github.com/LifeHack3r) and [@g33kyshivam](https://github.com/g33kyshivam) for the contribution.
