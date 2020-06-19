@@ -62,7 +62,9 @@ do
                 do
                         python3 $linkf -i $js -o cli >> js/$n1-$n2/linkfinder.txt
                         echo "$js" >> js/$n1-$n2/jslinks.txt
-                        wget $js -P db/$n1-$n2/ -q
+                        #wget $js -P db/$n1-$n2/ -q
+                        filename=$(echo $js | awk -F/ '{print $(NF-0)}')
+                        curl --connect-timeout 10 --max-time 10 --insecure --silent $js | js-beautify - > db/$n1-$n2/$filename 2> /dev/null
                 done
         fi
         cd ..
